@@ -1,0 +1,14 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Avalonia.Themes.SystemLF">
+    <Style Selector="Button">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <local:SystemThemeDecorator ControlType="Button" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}"/>
+                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent" IsHitTestVisible="False"/>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

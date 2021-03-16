@@ -5,16 +5,15 @@
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/Base.xaml" />  
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentBaseLight.xaml" />
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentControlResourcesLight.xaml" />
-    <!--StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/FluentControls.xaml" /-->
 
-    <!-- Define ToolTip first so its styles can be overriden by other controls (e.g. TextBox) -->  
+
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ToolTip.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/DataValidationErrors.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/FocusAdorner.xaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/Button.xaml"/>
+    <!--StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/Button.xaml"/-->
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/CaptionButtons.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/Carousel.xaml"/>  
-    <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/CheckBox.xaml"/>
+    <!--StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/CheckBox.xaml"/-->
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ComboBox.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ComboBoxItem.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ContentControl.xaml"/>
@@ -30,7 +29,7 @@
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/PathIcon.xaml" />
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/PopupRoot.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ProgressBar.xaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/RadioButton.xaml"/>
+    <!--StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/RadioButton.xaml"/-->
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/RepeatButton.xaml" />
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/Separator.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/Slider.xaml"/>
@@ -38,7 +37,6 @@
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/ScrollViewer.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TabStrip.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TabStripItem.xaml"/>
-    <!-- TabControl needs to come after TabStrip as it redefines the inner TabStrip.ItemsPanel-->
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TabControl.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TabItem.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TextBox.xaml"/>
@@ -65,7 +63,4 @@
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/SplitView.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/DatePicker.xaml"/>  
     <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/TimePicker.xaml"/>
-
-    
-    <!--FluentTheme Mode="Light"/-->
 </Styles>

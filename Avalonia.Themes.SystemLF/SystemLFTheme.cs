@@ -88,7 +88,7 @@ namespace Avalonia.Themes.SystemLF
 
         void IResourceProvider.AddOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.AddOwner(owner);
         void IResourceProvider.RemoveOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.RemoveOwner(owner);
-
-        private Uri GetUri() => new Uri("avares://Avalonia.Themes.SystemLF/SystemLF.axaml", UriKind.Absolute);
+        static readonly string URI_STRING = "avares://Avalonia.Themes.SystemLF/Controls/SystemLFControls.axaml"; //"avares://Avalonia.Themes.SystemLF/SystemLF.axaml"
+        private Uri GetUri() => new Uri(URI_STRING, UriKind.Absolute);
     }
 }
