@@ -1,0 +1,37 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Avalonia.Themes.SystemLF">
+    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/FluentTemp.axaml" />
+
+    
+    <Style Selector="Button">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <local:SystemThemeDecorator ControlType="Button" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}"/>
+                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent" IsHitTestVisible="False"/>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="CheckBox">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <DockPanel>
+                    <local:SystemThemeDecorator ControlType="CheckBox" Width="13" Height="13" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}" IsTicked="{TemplateBinding IsChecked}" DockPanel.Dock="Left" Margin="0,0,4,0"/>
+                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent" IsHitTestVisible="False"/>
+                </DockPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="RadioButton">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <DockPanel>
+                    <local:SystemThemeDecorator ControlType="RadioButton" Width="13" Height="13" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}" IsTicked="{TemplateBinding IsChecked}" DockPanel.Dock="Left" Margin="0,0,4,0"/>
+                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent" IsHitTestVisible="False"/>
+                </DockPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

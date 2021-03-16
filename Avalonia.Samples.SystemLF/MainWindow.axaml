@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pages="clr-namespace:XamlControlsGallery.Pages"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia.Samples.SystemLF.MainWindow"
+        Title="Avalonia.Samples.SystemLF">
+    <TabControl x:Name="TabControl" TabStripPlacement="Left">
+      <TabItem Header="Overview">
+        <pages:OverviewPage />
+      </TabItem>
+      <!--TabItem Header="Basic Input">
+        
+      </TabItem>
+      <TabItem Header="Collections">
+
+      </TabItem-->
+      <TabItem Header="Date and Time">
+        <pages:DateTimePage />
+      </TabItem>
+      <TabItem Header="Layout">
+        <pages:LayoutPage />
+      </TabItem>
+      <!--TabItem Header="Media">
+        <pages:MediaPage />
+      </TabItem-->
+      <TabItem Header="Menus">
+        <pages:MenusPage />
+      </TabItem>
+      <!--TabItem Header="Navigation">
+
+      </TabItem>
+      <TabItem Header="Scrolling">
+
+      </TabItem>
+      <TabItem Header="Status and Info">
+
+      </TabItem>
+      <TabItem Header="Styles">
+
+      </TabItem>
+      <TabItem Header="Text">
+
+      </TabItem-->
+    </TabControl>
+</Window>
