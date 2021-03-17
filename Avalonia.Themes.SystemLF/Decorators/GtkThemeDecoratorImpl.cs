@@ -92,6 +92,9 @@ namespace Avalonia.Themes.SystemLF
 		internal static extern void gtk_container_add(IntPtr container, IntPtr widget);
 
         [DllImport ("libgtk-3.so.0", CallingConvention = CallingConvention.Cdecl)]
+		internal static extern void gtk_widget_set_app_paintable(IntPtr window, bool state);
+
+        [DllImport ("libgtk-3.so.0", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern IntPtr gtk_widget_get_window(IntPtr widget);
 
         [DllImport ("libgtk-3.so.0", CallingConvention = CallingConvention.Cdecl)]
@@ -220,7 +223,7 @@ namespace Avalonia.Themes.SystemLF
             CreateGtkWindow<ToggleButton>(ControlType.RadioButton, ref DISABLED_WINDOWS, isEnabled: false);
             CreateGtkWindow<ToggleButton>(ControlType.RadioButton, ref DISABLED_CHECKED_WINDOWS, isChecked: true, isEnabled: false);*/
 
-            string text = " ";
+            string text = "";
             CreateGtkWindow(ControlType.RadioButton, ref IDLE_WINDOWS, () => new RadioButton(text).Handle, (ptr) => { });
             CreateGtkWindow(ControlType.RadioButton, ref HOVER_WINDOWS, (() => 
             {
@@ -257,7 +260,9 @@ namespace Avalonia.Themes.SystemLF
         void CreateGtkWindow<T>(ControlType ctrlType, ref Dictionary<ControlType, IntPtr[]> dictionary, bool isHovered = false, bool isPressed = false, bool isChecked = false, bool isEnabled = true) where T : Widget, new()
         {
             var OFFSCREEN_GTK_WINDOW = GtkMethods.gtk_offscreen_window_new();
+            GtkMethods.gtk_widget_set_app_paintable(OFFSCREEN_GTK_WINDOW, true);
             GtkMethods.gtk_widget_realize(OFFSCREEN_GTK_WINDOW);
+
             var wdg = new T();
             GtkMethods.gtk_container_add(OFFSCREEN_GTK_WINDOW, wdg.Handle);
             GtkMethods.gtk_application_add_window(APP.Handle, OFFSCREEN_GTK_WINDOW);
@@ -296,7 +301,9 @@ namespace Avalonia.Themes.SystemLF
             };*/
 
             var OFFSCREEN_GTK_WINDOW = GtkMethods.gtk_offscreen_window_new();
+            GtkMethods.gtk_widget_set_app_paintable(OFFSCREEN_GTK_WINDOW, true);
             GtkMethods.gtk_widget_realize(OFFSCREEN_GTK_WINDOW);
+
             var wdg = child();
             GtkMethods.gtk_container_add(OFFSCREEN_GTK_WINDOW, wdg);
             GtkMethods.gtk_application_add_window(APP.Handle, OFFSCREEN_GTK_WINDOW);
