@@ -189,6 +189,18 @@ namespace Avalonia.Themes.SystemLF
             context.DrawRectangle(new Avalonia.Media.ImageBrush(avBmp), null, bounds.WithX(0).WithY(0));
         }
 
-
+        public bool TryGetRequestedSize(ControlType type, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, out Size size)
+        {
+            size = Size.Empty;
+            if (
+                    (type == ControlType.CheckBox) ||
+                    (type == ControlType.RadioButton)
+                )
+            {
+                size = new Size(13, 13);
+                return true;
+            }
+            return false;
+        }
     }
 }

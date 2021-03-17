@@ -346,9 +346,9 @@ namespace Avalonia.Themes.SystemLF
 
             var ctrlT = ctrlType; //ControlType.Button;
             var size = bounds.Size;
-            Avalonia.Media.IBrush brush = null;
+            Avalonia.Media.IBrush brush = GetWidgetBrush(GetOffscreenWindow(ctrlT, isHovered, isPressed, isTicked, isEnabled), size);
             
-            if (!isEnabled)
+            /*if (!isEnabled)
             {
                 if (isTicked)
                     brush = GetWidgetBrush(DISABLED_CHECKED_WINDOWS[ctrlT], size);
@@ -362,10 +362,30 @@ namespace Avalonia.Themes.SystemLF
             else if (isHovered)
                 brush = GetWidgetBrush(HOVER_WINDOWS[ctrlT], size);
             else
-                brush = GetWidgetBrush(IDLE_WINDOWS[ctrlT], size);
+                brush = GetWidgetBrush(IDLE_WINDOWS[ctrlT], size);*/
 
 
             context.DrawRectangle(brush, null, bounds.WithX(0).WithY(0));
+        }
+
+
+        IntPtr[] GetOffscreenWindow(ControlType ctrlType, bool isHovered, bool isPressed, bool isTicked, bool isEnabled)
+        {
+            if (!isEnabled)
+            {
+                if (isTicked)
+                    return DISABLED_CHECKED_WINDOWS[ctrlType];
+                else
+                    return DISABLED_WINDOWS[ctrlType];
+            }
+            else if (isTicked)
+                return CHECKED_WINDOWS[ctrlType];
+            else if (isPressed)
+                return PRESSED_WINDOWS[ctrlType];
+            else if (isHovered)
+                return HOVER_WINDOWS[ctrlType];
+            else
+                return IDLE_WINDOWS[ctrlType];
         }
 
 
@@ -432,6 +452,23 @@ namespace Avalonia.Themes.SystemLF
                 }
             }
             return new Avalonia.Media.SolidColorBrush(Avalonia.Media.Colors.Blue);
+        }
+
+        public bool TryGetRequestedSize(ControlType type, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, out Size size)
+        {
+            //IntPtr[] window = GetOffscreenWindow(ctrlT, isHovered, isPressed, isTicked, isEnabled);
+            //GtkMethods.gtk_widget_size_request(window[1], out IntPtr size);
+            //how 2 gtk_widget_get_preferred_size?????
+            size = Size.Empty;
+            if (
+                    (type == ControlType.CheckBox) ||
+                    (type == ControlType.RadioButton)
+                )
+            {
+                size = new Size(17, 17);
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -66,5 +66,30 @@ namespace Avalonia.Themes.SystemLF
             if ((VisualRoot != null) && (VisualRoot is Window win))
                 DECORATOR_IMPL.Render(context, Bounds, ControlType, IsHovered, IsPushed, IsTicked, IsEnabled, win);
         }
+
+        protected override Size MeasureOverride(Size availableSize)
+        {
+            Size baseSize = base.MeasureOverride(availableSize);
+            if (DECORATOR_IMPL.TryGetRequestedSize(ControlType, IsHovered, IsPushed, IsTicked, IsEnabled, out Size reqSize))
+            {
+                double outW = baseSize.Width;
+                double outH = baseSize.Height;
+
+                double reqW = reqSize.Width;
+                double reqH = reqSize.Height;
+                
+                if (IsValidForDesiredSize(reqW))
+                    outW = Math.Max(reqW, outW);
+                
+                if (IsValidForDesiredSize(reqH))
+                    outH = Math.Max(reqH, outH);
+                
+                return new Size(outW, outH);
+            }
+            else
+                return baseSize;
+        }
+
+        bool IsValidForDesiredSize(double test) => (!double.IsInfinity(test)) && (!double.IsNaN(test) && (test >= 0));
     }
 }

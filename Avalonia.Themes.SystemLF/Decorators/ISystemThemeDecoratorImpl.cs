@@ -14,5 +14,7 @@ namespace Avalonia.Themes.SystemLF
     public interface ISystemThemeDecoratorImpl
     {
         void Render(DrawingContext context, Rect bounds, ControlType ctrlType, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, Window topLevel);
+
+        bool TryGetRequestedSize(ControlType type, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, out Size size);
     }
 }

@@ -15,5 +15,11 @@ namespace Avalonia.Themes.SystemLF
     {
         public void Render(DrawingContext context, Rect bounds, ControlType ctrlType, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, Window topLevel)
         { }
+
+        public bool TryGetRequestedSize(ControlType type, bool isHovered, bool isPressed, bool isChecked, bool isEnabled, out Size size)
+        {
+            size = Size.Empty;
+            return false;
+        }
     }
 }
