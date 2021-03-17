@@ -55,6 +55,8 @@ namespace Avalonia.Themes.SystemLF
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 DECORATOR_IMPL = new WindowsSystemThemeDecoratorImpl();
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                DECORATOR_IMPL = new GtkThemeDecoratorImpl();
             else
                 DECORATOR_IMPL = new NullThemeDecoratorImpl();
         }
