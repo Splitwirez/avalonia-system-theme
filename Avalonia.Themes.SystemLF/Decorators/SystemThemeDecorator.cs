@@ -15,7 +15,11 @@ namespace Avalonia.Themes.SystemLF
 	{
 		Button,
 		RadioButton,
-		CheckBox
+		CheckBox,
+        ListBox,
+        ListBoxItem,
+        TextBox,
+        TextBoxReadOnly
 	}
 	
 	public class SystemThemeDecorator : Control

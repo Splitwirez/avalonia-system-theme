@@ -346,26 +346,30 @@ namespace Avalonia.Themes.SystemLF
 
             var ctrlT = ctrlType; //ControlType.Button;
             var size = bounds.Size;
-            Avalonia.Media.IBrush brush = GetWidgetBrush(GetOffscreenWindow(ctrlT, isHovered, isPressed, isTicked, isEnabled), size);
-            
-            /*if (!isEnabled)
+            var offsc = GetOffscreenWindow(ctrlT, isHovered, isPressed, isTicked, isEnabled);
+            if (offsc != null)
             {
-                if (isTicked)
-                    brush = GetWidgetBrush(DISABLED_CHECKED_WINDOWS[ctrlT], size);
+                Avalonia.Media.IBrush brush = GetWidgetBrush(offsc, size);
+                
+                /*if (!isEnabled)
+                {
+                    if (isTicked)
+                        brush = GetWidgetBrush(DISABLED_CHECKED_WINDOWS[ctrlT], size);
+                    else
+                        brush = GetWidgetBrush(DISABLED_WINDOWS[ctrlT], size);
+                }
+                else if (isTicked)
+                    brush = GetWidgetBrush(CHECKED_WINDOWS[ctrlT], size);
+                else if (isPressed)
+                    brush = GetWidgetBrush(PRESSED_WINDOWS[ctrlT], size);
+                else if (isHovered)
+                    brush = GetWidgetBrush(HOVER_WINDOWS[ctrlT], size);
                 else
-                    brush = GetWidgetBrush(DISABLED_WINDOWS[ctrlT], size);
+                    brush = GetWidgetBrush(IDLE_WINDOWS[ctrlT], size);*/
+
+
+                context.DrawRectangle(brush, null, bounds.WithX(0).WithY(0));
             }
-            else if (isTicked)
-                brush = GetWidgetBrush(CHECKED_WINDOWS[ctrlT], size);
-            else if (isPressed)
-                brush = GetWidgetBrush(PRESSED_WINDOWS[ctrlT], size);
-            else if (isHovered)
-                brush = GetWidgetBrush(HOVER_WINDOWS[ctrlT], size);
-            else
-                brush = GetWidgetBrush(IDLE_WINDOWS[ctrlT], size);*/
-
-
-            context.DrawRectangle(brush, null, bounds.WithX(0).WithY(0));
         }
 
 

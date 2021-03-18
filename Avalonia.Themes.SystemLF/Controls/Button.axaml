@@ -6,7 +6,7 @@
             <ControlTemplate>
                 <Panel>
                     <local:SystemThemeDecorator ControlType="Button" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}"/>
-                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent" IsHitTestVisible="False"/>
+                    <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent"/>
                 </Panel>
             </ControlTemplate>
         </Setter>

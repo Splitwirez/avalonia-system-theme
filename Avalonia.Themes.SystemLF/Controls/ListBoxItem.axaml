@@ -1,13 +1,13 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Avalonia.Themes.SystemLF">
-    <Style Selector="CheckBox">
+    <Style Selector="ListBoxItem">
         <Setter Property="Template">
             <ControlTemplate>
-                <DockPanel>
-                    <local:SystemThemeDecorator ControlType="CheckBox" IsHovered="{TemplateBinding IsPointerOver}" IsPushed="{TemplateBinding IsPressed}" IsEnabled="{TemplateBinding IsEnabled}" IsTicked="{TemplateBinding IsChecked}" DockPanel.Dock="Left" Margin="0,0,4,0"/>
+                <Panel>
+                    <local:SystemThemeDecorator ControlType="ListBoxItem" IsHovered="{TemplateBinding IsPointerOver}" IsEnabled="{TemplateBinding IsEnabled}" IsTicked="{TemplateBinding IsSelected}"/>
                     <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Padding="{TemplateBinding Padding}" Background="Transparent"/>
-                </DockPanel>
+                </Panel>
             </ControlTemplate>
         </Setter>
     </Style>

@@ -5,7 +5,7 @@
         xmlns:pages="clr-namespace:XamlControlsGallery.Pages"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Avalonia.Samples.SystemLF.MainWindow"
-        Title="Avalonia.Samples.SystemLF">
+        Title="Avalonia.Samples.SystemLF" Background="#FF7F7F7F">
     <TabControl x:Name="TabControl" TabStripPlacement="Left">
       <TabItem Header="Overview">
         <pages:OverviewPage />

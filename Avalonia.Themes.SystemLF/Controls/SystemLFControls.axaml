@@ -15,10 +15,10 @@
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ContentControl.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/Label.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/GridSplitter.axaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ItemsControl.axaml"/>
+    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ItemsControl.axaml"/-->
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ListBox.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ListBoxItem.axaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/Menu.axaml"/>
+    <!--StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/Menu.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ContextMenu.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/MenuItem.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/OverlayPopupHost.axaml"/>
@@ -36,9 +36,9 @@
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TabStrip.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TabStripItem.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TabControl.axaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TabItem.axaml"/>
+    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TabItem.axaml"/-->
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TextBox.axaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ToggleButton.axaml"/>
+    <!--StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/ToggleButton.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/Expander.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TitleBar.axaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.SystemLF/Controls/TreeView.axaml"/>

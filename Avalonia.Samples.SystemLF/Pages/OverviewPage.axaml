@@ -102,11 +102,6 @@
           <ListBoxItem Content="Mac" />
           <ListBoxItem Content="Windows" />
         </ListBox>
-        <Border
-            BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
-            BorderThickness="1"
-            CornerRadius="{DynamicResource ControlCornerRadius}"
-            IsHitTestVisible="False" />
       </Grid>
 
       <Grid
@@ -125,11 +120,6 @@
           <ListBoxItem Content="Mac" />
           <ListBoxItem Content="Windows" />
         </ListBox>
-        <Border
-            BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
-            BorderThickness="1"
-            CornerRadius="{DynamicResource ControlCornerRadius}"
-            IsHitTestVisible="False" />
       </Grid>
     </StackPanel>
 
@@ -138,14 +128,18 @@
           Text="Textbox" Margin="0 0 0 20"
           Classes="header" />
       <TextBox
-        Watermark="Placeholder text"   />
+        Watermark="Normal"   />
       <TextBox
-          Watermark="Placeholder text"
+          Watermark="Disabled"
           IsEnabled="False"
           Margin="0,17,0,0" />
       <TextBox
-          Watermark="Placeholder text"
+          Watermark="Super secret password"
           PasswordChar="*"
+          Margin="0,17,0,0" />
+      <TextBox
+          Watermark="Read-only"
+          IsReadOnly="True"
           Margin="0,17,0,0" />
 
       <TextBlock
